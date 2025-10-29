@@ -1,5 +1,5 @@
 """
-torchrun --standalone --nproc_per_node=8 fsdp.py
+torchrun --standalone --nproc_per_node=8 main.py
 """
 
 import os
@@ -396,7 +396,7 @@ def validation(model):
 # ----- DISTRIBUTED -----
 rank = int(os.environ["RANK"])
 world_size = int(os.environ["WORLD_SIZE"])
-assert world_size == 2
+assert world_size == 8
 assert torch.cuda.is_available()
 device = torch.device("cuda", int(os.environ["LOCAL_RANK"]))
 torch.cuda.set_device(

@@ -7,6 +7,13 @@ I ran this script on a 8xH100 80GB node for a 3.2B param model and a 7.6B param 
 - 3.2B: https://huggingface.co/michaelbzhu/test-3.2B-base
 - 7.6B: https://huggingface.co/michaelbzhu/test-7.6B-base
 
+### Quickstart
+```
+uv sync
+source .venv/bin/activate
+torchrun --standalone --nproc_per_node=8 main.py
+```
+
 ### Model Architecture
 Implements a dense transformer architecture with the following details:
 - Feed forward network: Linear -> ReLU -> Linear
