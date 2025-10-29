@@ -1,0 +1,13 @@
+[project]
+name = "pretraining-draft"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "huggingface-hub>=1.0.1",
+    "numpy>=2.3.4",
+    "torch>=2.9.0",
+    "tqdm>=4.67.1",
+    "wandb>=0.22.3",
+]
